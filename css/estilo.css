@@ -1,0 +1,343 @@
+
+body,html {
+ 
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    color: white;
+    font-family: "Montserrat", sans-serif;
+   /* para esconder qualquer barra de rolagem que possa aparecer */
+}
+
+nav a {
+    font-size: 1.5rem !important;
+    padding-bottom: 1rem !important;
+}
+
+.offcanvas {
+    transition: transform 1s ease-in-out; /* Adiciona uma transição de 0.3 segundos */
+}
+
+.espaco{
+    padding-top: 3rem !important;
+}
+
+
+nav button {
+    transition: 10s !important;
+}
+
+
+.carousel-item img {
+    height: 600px; /* Defina a altura desejada aqui */
+    object-fit: cover; /* Para manter a proporção da imagem */
+}
+
+.texto{
+    font-size: 1.5rem;
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+    letter-spacing: 0.2rem;
+    text-decoration: none !important;
+}
+
+.text{
+    font-size: 1.5rem;
+    font-family: 'Montserrat', sans-serif;
+    letter-spacing: 0.2rem;
+    text-decoration: none !important;
+    text-align: justify;
+    margin-top: 2rem;
+}
+
+.texto2{
+    font-size: 1.2rem;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: justify;
+    letter-spacing: 0.2rem;
+}
+
+.sobre{
+    font-size: 1rem;
+    text-align: center;
+    letter-spacing: 0.1rem;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin: 15px !important;
+}
+
+.sobre2{
+    font-size: 1rem;
+    text-align: center;
+    letter-spacing: 0.1rem;
+    font-family: 'Montserrat', sans-serif;
+    margin: 15px !important;
+}
+
+/* Estilizando a barra de rolagem */
+::-webkit-scrollbar {
+    width: 12px; /* Largura da barra de rolagem */
+  }
+  
+  /* Estilizando o trilho da barra de rolagem */
+  ::-webkit-scrollbar-track {
+    background: dimgray; /* Cor de fundo do trilho */
+  }
+  
+  /* Estilizando o indicador da barra de rolagem */
+  ::-webkit-scrollbar-thumb {
+    background: darkturquoise; /* Cor do indicador */
+    border-radius: 30px !important;
+    height: 50px !important;
+  }
+  
+  /* Mudando a cor quando passa o mouse sobre a barra de rolagem */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555; /* Cor do indicador ao passar o mouse */
+  }
+
+  footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background: radial-gradient(circle at center, darkslategrey, black);
+    
+   
+    
+}
+
+.lut{
+    background-image: radial-gradient(circle at center, transparent 0%, transparent 70%, black 100%);
+
+}
+
+.contatos{
+    margin-right: 10px !important;
+    padding-right: 15px !important;
+}
+
+
+iframe{
+    border-radius: 20px !important;
+}
+
+p{
+    font-size: 1.2rem ;
+}
+
+.icone{
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    z-index: 1;
+    cursor: pointer;
+    transition: 2s;
+}
+
+.icone:hover{
+    transform: scale(1.2) !important;
+}
+
+
+
+#chat-box {
+    display: none; /* Inicia escondido */
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    width: 400px !important;
+    height: 500px !important;
+    background-color: #fff;
+    border: 4px solid darkturquoise; 
+    border-radius: 5px;
+    padding: 10px;
+    z-index: 2; /* Garante que o chat box está sobre o ícone */
+    color: black;
+}
+
+#chat-footer{
+   display: flexbox;
+   position: relative !important;
+   bottom:initial !important;
+   margin: auto !important;
+   left: 0;
+   
+}
+.bot-message {
+    background: darkturquoise !important;
+    color: black;
+    align-self: flex-start;
+}
+
+.chat-message {
+    margin-bottom: 15px; /* Espaço de 10 pixels entre cada mensagem */
+    padding-top: 25px !important;
+    margin-top: 20rem!;
+   
+    padding-left: 10px !important;
+    border-radius: 10px;
+}
+
+.fechar{
+    padding: 5px;
+    border-radius: 10px !important;
+    color: black;
+    cursor: pointer;
+    width: fit-content !important;
+    font-size: 0.9rem;
+    bottom: 10px;
+    right: 10px;
+    z-index: 1;
+}
+.chat-header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+#chat-box {
+    transition: opacity 0.5s;
+    
+}
+
+.borda{
+    border-radius: 10px;
+    box-shadow: 0 0 20px #E6E6E6; 
+}
+
+.borda:hover{
+    cursor: pointer;
+    transform: scale(1.1);
+    transition: 1s !important;
+    text-align: center !important;
+}
+
+.user-input{
+    width: 100%;
+    margin-top: 10px !important;
+    height: 45px !important;
+    border-radius: 15px !important;
+    padding: 6px !important;  
+    margin-bottom: 15px !important;
+    outline: none;
+}
+
+
+.offcanvas-body button:hover{
+    transform: scale(1.2); /* aumenta o tamanho do botão para 1.5 vezes o tamanho original */
+    transition: 1s !important;
+}
+
+#chat-box {
+    height: 300px; /* Altura desejada para o chat */
+    overflow-y: auto; /* Adiciona uma barra de rolagem vertical quando necessário */
+    
+    
+}
+
+/* Adicione estilos para a mensagem de "digitando" */
+.bot-is-typing::after {
+    content: "Digitando...";
+    display: block;
+    padding: 5px;
+    font-size: 1em;
+    color: black !important;
+}
+
+/* Estilos para as mensagens do usuário */
+/*.user-message {
+   
+    text-align: right; 
+    background-image: url('/imagem/usuario.gif');
+    background-repeat: no-repeat; 
+    background-position: left center; 
+    padding: auto;
+    
+}
+
+.bot-message {
+    text-align: left; 
+    background-image: url('/imagem/robo-_1_.gif') ;
+    background-repeat: no-repeat; 
+    background-position: top right ;
+    padding: auto;
+}*/
+
+.baixo {
+  
+    bottom: 0;
+    cursor: pointer;
+}
+
+
+@media (max-width: 700px){
+
+    .texto{
+        font-size: 1rem;
+        font-family: 'Montserrat', sans-serif;
+        text-align: center;
+        letter-spacing: 0.1rem;
+    }
+
+    .texto2{
+        font-size: 1rem;
+        font-family: Arial, Helvetica, sans-serif;
+        text-align: left;
+        letter-spacing: 0.2rem;
+    }
+
+    .carousel-item img {
+        height: 400px; /* Defina a altura desejada aqui */
+        object-fit: cover; /* Para manter a proporção da imagem */
+     
+    }
+
+    nav a {
+        font-size: 1.2rem !important;
+        padding-bottom: 1rem !important;
+        height: auto !important;
+    }
+
+    .cardss{
+        text-align: center !important;
+    }
+
+    #chat-box {
+        display: none; /* Inicia escondido */
+        position: fixed;
+        bottom: 0;
+        right: 0;
+        width: 100% !important;
+        height: 100% !important;
+        background-color: #fff;
+        border: 4px solid darkturquoise; 
+        border-radius: 10px;
+        padding: 10px;
+        z-index: 2; /* Garante que o chat box está sobre o ícone */
+        color: black;
+    }
+
+    .custom-margin {
+        padding-left: 10rem !important; /* ou o valor desejado */
+    }
+
+    img{
+        background: linear-gradient(rgba(0, 0, 0, 0.1));
+    }
+
+    .text{
+        font-size: 1.2rem;
+        font-family: 'Montserrat', sans-serif;
+        letter-spacing: 0.2rem;
+        text-decoration: none !important;
+        text-align: left ;
+        margin-top: 2rem;
+    }
+
+    
+}
+
+@media (max-width: 768px) {
+    .justify-content-center-sm {
+        justify-content: center !important;
+    }
+}
